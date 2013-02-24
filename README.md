@@ -1,4 +1,4 @@
-Typehead.js.wp
+Typeahead.js.wp
 ==============
 
-A wordpress plugin to add Typehead.js autocomplete to the wordpress search bar.
+A wordpress plugin to add Typeahead.js autocomplete to the wordpress search bar.
