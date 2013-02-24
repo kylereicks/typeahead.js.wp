@@ -18,5 +18,14 @@ if(!class_exists(Typeahead_WP_JSON_API)){
       }
       return json_encode($tag_names);
     }
+
+    function categories(){
+      $category_names = array();
+      $categories = get_categories();
+      foreach($categories as $category){
+        array_push($category_names, $category->name);
+      }
+      return json_encode($category_names);
+    }
   }
 }
