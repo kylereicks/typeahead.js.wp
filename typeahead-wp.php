@@ -36,7 +36,7 @@ if(!class_exists('Typeahead_WP')){
       $data_url = array('dataUrl' => plugins_url('data/json.php', __FILE__));
       wp_localize_script('typeahead_activation', 'typeaheadPlugin', $data_url);
 
-      $datasets = array('datasets' => array('tags', 'categories'));
+      $datasets = array('datasets' => array('tags', 'categories', 'post_titles'));
       wp_localize_script('typeahead_activation', 'typeahead', $datasets);
 
     }
