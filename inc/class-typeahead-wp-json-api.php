@@ -46,7 +46,7 @@ if(!class_exists(Typeahead_WP_JSON_API)){
       return json_encode($user_names);
     }
 
-     private function authors(){
+    private function authors(){
       return $this->users('Author');
     }
 
