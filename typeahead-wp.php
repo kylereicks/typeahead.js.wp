@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Typeahead.WP
-Plugin URI: http://github.com/kylereicks/typeahead.wp
+Plugin URI: http://github.com/kylereicks/typeahead.js.wp
 Description: A wordpress plugin to add Typeahead.js autocomplete to the wordpress search form.
 Author: Kyle Reicks
 Version: 0.1
@@ -23,7 +23,7 @@ if(!class_exists('Typeahead_WP')){
       wp_register_style('typeahead_style', plugins_url('typeahead.js/css/typeahead.css', __FILE__));
 
       // register scripts
-      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), 0.8, true);
+      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), 0.8.1, true);
       wp_register_script('typeahead_activation', plugins_url('js/typeahead-activation.js', __FILE__), array('typeahead_script'), 1.0, true);
 
       $this->check_min_jquery_version('1.9.0');
