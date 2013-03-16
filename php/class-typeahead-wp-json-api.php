@@ -28,13 +28,21 @@ if(!class_exists(Typeahead_WP_JSON_API)){
       return json_encode($category_names);
     }
 
-    private function post_titles(){
+    private function titles($post_type){
       $all_post_titles = array();
-      $post_id_query = new WP_Query(array('post_type' => 'any', 'posts_per_page' => -1, 'fields' => 'ids'));
+      $post_id_query = new WP_Query(array('post_type' => $post_type, 'posts_per_page' => -1, 'fields' => 'ids'));
       foreach($post_id_query->posts as $id){
         array_push($all_post_titles, get_the_title($id));
       }
       return json_encode($all_post_titles);
+    }
+
+    private function post_titles(){
+      return $this->titles('post');
+    }
+
+    private function page_titles(){
+      return $this->titles('page');
     }
 
     private function users($role){
