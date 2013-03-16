@@ -37,7 +37,6 @@ if(!class_exists('Typeahead_WP')){
       $datasets = $this->get_dataset_array();
       $data = array('dataUrl' => plugins_url('data/json.php', __FILE__), 'datasets' => $datasets);
       wp_localize_script('typeahead_activation', 'typeahead', $data);
-      print_r(get_option('_typeahead_datasets'));
     }
 
     private function check_min_jquery_version($version_number){
