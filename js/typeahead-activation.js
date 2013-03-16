@@ -1,9 +1,8 @@
-typeahead.dataSrc = typeaheadPlugin.dataUrl;
 typeahead.data = [];
-for(var i = 0; i < typeahead.datasets.length; i++){
+for(i = 0, arrayLength = typeahead.datasets.length; i < arrayLength; i++){
   typeahead.data[i] = {
     name: typeahead.datasets[i],
-    prefetch: typeahead.dataSrc + '?data=' + typeahead.datasets[i]
+    prefetch: typeahead.dataUrl + '?data=' + typeahead.datasets[i]
   };
 }
 jQuery(document).ready(function($){

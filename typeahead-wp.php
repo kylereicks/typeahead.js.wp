@@ -35,10 +35,7 @@ if(!class_exists('Typeahead_WP')){
       wp_enqueue_script('typeahead_activation');
 
       // localize variables
-      $data_url = array('dataUrl' => plugins_url('data/json.php', __FILE__));
-      wp_localize_script('typeahead_activation', 'typeaheadPlugin', $data_url);
-
-      $datasets = array('datasets' => array('tags', 'categories', 'post_titles', 'authors', 'contributors', 'editors'));
+      $datasets = array('dataUrl' => plugins_url('data/json.php', __FILE__), 'datasets' => array('tags', 'categories', 'post_titles', 'authors', 'contributors', 'editors'));
       wp_localize_script('typeahead_activation', 'typeahead', $datasets);
 
     }
