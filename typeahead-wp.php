@@ -18,17 +18,11 @@ if(!class_exists('Typeahead_WP')){
     }
 
     function typeahead_scripts(){
-      // register styles
-      wp_register_style('typeahead_style', plugins_url('typeahead.js/css/typeahead.css', __FILE__));
-
       // register scripts
-      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), '0.8.1', true);
+      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), '0.9.0', true);
       wp_register_script('typeahead_activation', plugins_url('js/typeahead-activation.js', __FILE__), array('typeahead_script'), 1.0, true);
 
       $this->check_min_jquery_version('1.9.0');
-
-      // enqueue styles
-      wp_enqueue_style('typeahead_style');
 
       // enqueue scripts
       wp_enqueue_script('typeahead_activation');
