@@ -19,7 +19,7 @@ if(!class_exists('Typeahead_WP')){
 
     function typeahead_scripts(){
       // register scripts
-      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), '0.9.0', true);
+      wp_register_script('typeahead_script', plugins_url('typeahead.js/js/typeahead.js', __FILE__), array('jquery'), '0.9.3', true);
       wp_register_script('typeahead_activation', plugins_url('js/typeahead-activation.js', __FILE__), array('typeahead_script'), 1.0, true);
 
       $this->check_min_jquery_version('1.9.0');
